@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { makeEmojiList } from "../utils";
 import useQuery from "../hooks/useQuery";
@@ -14,6 +14,7 @@ function ArticlePage() {
   useEffect(() => {
     document.title = pageTitle;
   }, [pageTitle]);
+
 
   if (!isLoaded) return <h3>Loading...</h3>;
 
